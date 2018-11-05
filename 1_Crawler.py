@@ -24,9 +24,6 @@ def readSettings():
 
     setting=[]
     st=pd.read_json('./settings.json')
-    #print(st,'st')
-    #print(st["Password"].values[0],'PD PASSWORD')
-    #print(st["ID"].values[0],'ID')
     setting.append(st["ID"].values[0])
     setting.append(st["Password"].values[0])
 
@@ -45,11 +42,8 @@ def readSettings():
 def TimeGap(postTime,pushTime):
     if pushTime==0:
         return 999999
-    if showPushTime:
-        #print(postTime,'post')
+    if showPushTime==True:
         print(pushTime,'push')
-    #print(postTime.split(' ')[-2])
-    #print(pushTime.split(' ')[-1])
 
     try:
         HourGap=(int(pushTime.split(' ')[-1].split(':')[0])-int(postTime.split(' ')[-2].split(':')[0]))%24
@@ -68,7 +62,6 @@ def TimeGap(postTime,pushTime):
 
 def AnalyseBowWen(PIndex):
     ErrCode,Post=PTTBot.getPost(Board,PostIndex=PIndex)
-    #print(ErrCode,'ErrCode')
     if ErrCode==0:
         PushCount=0
         BooCount=0
@@ -93,14 +86,9 @@ def AnalyseBowWen(PIndex):
                 BooCount+=1
             elif Push.getType() == PTT.PushType.Arrow:
                 ArrowCount+=1
-            #print(Push.getTime(),'TIME')
-            #print(type(Push.getTime()),'Type?')
-            #print(Post.getDate(),'PostTime')
 
-            
-        #print(PIndex,PushCount,BooCount,ArrowCount,'PIndex Push Boo Arrow')
         if PushCount>pushBoundary:
-            if showPushTime:
+            if showPushTime==True:
                 print(Post.getDate(),'Post Time')
             gapTarget=TimeGap(Post.getDate(),timeTarget)
             gap1=TimeGap(Post.getDate(),time25)
