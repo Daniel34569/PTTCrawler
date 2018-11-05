@@ -8,7 +8,7 @@ import pandas as pd
 print('import end')
 
 
-
+#Initial Global Param
 PTTBot=PTT.Library(kickOtherLogin=False)
 pushBoundary=0
 Board='Testtttt'
@@ -20,6 +20,7 @@ GapBoundary=0
 
 Month={'Jan':1,'Feb':2,'Mar':3,'Apr':4,'May':5,'Jun':6,'Jul':7,'Aug':8,'Sep':9,'Oct':10,'Nov':11,'Dec':12}
 
+#Read Setting
 def readSettings():
 
     setting=[]
@@ -38,7 +39,7 @@ def readSettings():
 
     return setting    
 
-
+#Calculate the time gap between post time and push time 
 def TimeGap(postTime,pushTime):
     if pushTime==0:
         return 999999
@@ -59,7 +60,7 @@ def TimeGap(postTime,pushTime):
     Gap=HourGap*60+MinuteGap
     return Gap
 
-
+#Analyse Bow Wen
 def AnalyseBowWen(PIndex):
     ErrCode,Post=PTTBot.getPost(Board,PostIndex=PIndex)
     if ErrCode==0:
