@@ -1,18 +1,19 @@
 # PTTCrawler
-試看看PTT的爬蟲
-
-用爬蟲分析看看最近的爆文是否有異常的情況
-
+試看看PTT的爬蟲，用爬蟲分析看看最近的爆文是否有異常的情況
+==
 
 需求模組:
+--
 PTTLibrary,json,numpy,pandas
 
-執行方式:調整完參數之後直接python執行
+執行方式:
+-
+調整完參數之後直接python執行
 
 
 
 參數設定: 
-
+--
 在settings.json中
 
 ID:PTT帳號
