@@ -14,7 +14,7 @@ PTTLibrary,json,numpy,pandas
 
 參數設定: 
 --
-在settings.json中
+在*settings.json*中
 
 ID:PTT帳號
 
