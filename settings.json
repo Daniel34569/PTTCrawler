@@ -1,0 +1,17 @@
+[
+	{
+		"ID":"請輸入ID",
+		"Password":"請輸入密碼",
+		"pushBoundary":"60",
+		"Board":"Gossiping",
+		"StartIndex":"770000",
+		"EndIndex":"780000",
+		"showPushTime":"False",
+		"GapPrint":"25",
+		"GapBoundary":"5",
+		
+		"SearchID":"False",
+		"TargetID":"mayaman"
+	}
+
+]
