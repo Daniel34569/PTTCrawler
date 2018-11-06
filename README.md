@@ -18,6 +18,10 @@ V1.1更新:
 
 以及這個ID的文章中第目標則推文與發文時間差距小於GapBoundary的篇數比率
 
+V1.2更新:
+-
+多了ID統計的功能
+
 
 參數設定: 
 --
@@ -44,3 +48,5 @@ GapBoundary:第GapPrint則推文與發文時間的差距，單位為分鐘，小
 SearchID:是否要搜尋特定ID(Bool值)
 
 TargetID:要搜尋的目標ID(String),在SearchID為True時才會有用
+
+CalUnderPush:指定數量以下的推文ID會被統計(int)
