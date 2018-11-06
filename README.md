@@ -10,6 +10,13 @@ PTTLibrary,json,numpy,pandas
 -
 調整完參數之後直接python執行
 
+V1.1更新:
+-
+增加搜尋特定ID的功能
+
+搜尋特定ID時最後結果會顯示這個ID爆文的篇數比率
+
+以及這個ID的文章中第目標則推文與發文時間差距小於GapBoundary的篇數比率
 
 
 參數設定: 
