@@ -10,6 +10,8 @@ PTTLibrary,json,numpy,pandas
 -
 調整完參數之後直接python執行
 
+1_AbnormalBowWenAnalyzer_Ver1_X.py和settings.json需要在同一目錄底下
+
 V1.1更新:
 -
 增加搜尋特定ID的功能
